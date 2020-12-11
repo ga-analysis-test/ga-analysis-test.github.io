@@ -1,0 +1,21 @@
+.body {
+  margin: 20px;
+}
+
+.info-item {
+  margin: 20px 0;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.other {
+  position: absolute;
+  bottom: 20px;
+}
+
+.title {
+  text-align: center;
+}
