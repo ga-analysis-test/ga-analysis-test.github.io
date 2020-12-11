@@ -11,6 +11,11 @@ table, th, td {
   border: 1px solid black;
 }
 
+table {
+  display: block;
+  overflow: scroll;
+}
+
 .other {
   position: absolute;
   bottom: 20px;
