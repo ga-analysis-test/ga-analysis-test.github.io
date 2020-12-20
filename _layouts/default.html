@@ -3,9 +3,6 @@
     <script type="text/javascript">
         var timerStart = Date.now();
     </script>
-    <script type="module">
-        setTimeout(function(){ console.log("delay 3s") }, 3000);
-    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,8 +48,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
-      $(document).ready(function() {
-
+      
+      function pageLoad(){
         $('#userAgent').text(window.navigator.userAgent);
         console.log(window.navigator.userAgent);
 
@@ -69,6 +66,11 @@
           });
           // document.getElementById('userGeo').innerHTML = JSON.stringify(data, null, 2);
         });
+      }
+      
+      $(document).ready(function() {
+        setTimeout(pageLoad(), 3000);
+
       });
     </script>
 </body>
