@@ -54,8 +54,7 @@
         $('#userAgent').text(window.navigator.userAgent);
         console.log(window.navigator.userAgent);
 
-        console.log("pageLoadTime: ", Date.now()-timerStart);
-        $('#pageLoadTime').text(Date.now()-timerStart + " miliseconds");
+        console.log("page dom LoadTime: ", Date.now()-timerStart);
 
         $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=2a722c9b9ffc45c597849dbe22cfd48d', function(data) {
           console.log(data);
@@ -75,6 +74,12 @@
 
 
       });
+      
+       $(window).load(function() {
+        console.log("page complete LoadTime: ", Date.now()-timerStart);
+        $('#pageLoadTime').text(Date.now()-timerStart + " miliseconds");
+      });
+
     </script>
 </body>
 </html>
