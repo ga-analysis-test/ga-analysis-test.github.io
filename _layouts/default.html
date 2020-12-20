@@ -71,7 +71,8 @@
       
       $(document).ready(function() {
         console.log("start delay");
-        setTimeout(pageLoad(), 3000);
+        setTimeout(function(){ pageLoad(); }, 3000);
+
 
       });
     </script>
