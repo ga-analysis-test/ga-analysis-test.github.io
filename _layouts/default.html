@@ -72,6 +72,9 @@
         console.log("start delay");
         setTimeout(function(){ pageLoad(); }, 1000);
 
+        var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+        console.log('Page load time is '+ loadTime);
+        $('#pageLoadTime').text(loadTime + " miliseconds");
 
       });
       
@@ -79,9 +82,6 @@
 //         console.log("page complete LoadTime: ", Date.now()-timerStart);
 //         $('#pageLoadTime').text(Date.now()-timerStart + " miliseconds");
 //       });
-    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
-    console.log('Page load time is '+ loadTime);
-    $('#pageLoadTime').text(loadTime + " miliseconds");
     </script>
 </body>
 </html>
