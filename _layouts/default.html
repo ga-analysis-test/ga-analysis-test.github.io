@@ -30,7 +30,7 @@
       </table>
     </div>
 
-    <button onclick="location.href='https://www.google.com/'" type="button" class="btn btn-primary">
+    <button onclick="conversionEve1()" type="button" class="btn btn-primary">
       Test Conversion
     </button>
 
@@ -47,6 +47,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
+      
+      function conversionEve1(){
+        ga('send', 'event', {
+          eventCategory: 'Outbound Link',
+          eventAction: 'click',
+          eventLabel: event.target.href
+        });
+
+        location.href='https://www.google.com/'
+      }
       
       function pageLoad(){
         console.log("delay complete")
