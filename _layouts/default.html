@@ -35,6 +35,10 @@
       Begin Checkout
     </button>
 
+     <div class="info-item">
+      <h4>Cookies</h4><span id="cookies"></span> 
+    </div>
+
     <div class="other">
       You can find the source code here:
       https://github.com/ga-analysis-test/ga-analysis-test.github.io/tree/gh-pages
@@ -50,18 +54,13 @@
     <script>
       
       document.getElementById('conversion').addEventListener('click', function(event) {
-            console.log(event);
         conversionEve1(event);
       });
 
 
       function conversionEve1(event){
         console.log(event);
-//         gtag('send', 'event', {
-//           eventCategory: 'Outbound Link',
-//           eventAction: 'click',
-//           eventLabel: 'www.google.com'
-//         });
+
         gtag('event', 'begin_checkout', {
           'event_category': 'ecommerce',
           'event_label': 'purchase',
@@ -90,6 +89,16 @@
         });
       }
       
+      function listCookies() {
+          var theCookies = document.cookie.split(';');
+          var aString = '';
+          for (var i = 1 ; i <= theCookies.length; i++) {
+              aString += i + ' ' + theCookies[i-1] + "\n";
+          }
+          return aString;
+      }
+
+      
       $(document).ready(function() {
         console.log("start delay");
         setTimeout(function(){ pageLoad(); }, 1000);
@@ -98,6 +107,8 @@
         console.log('Page load time is '+ loadTime);
         $('#pageLoadTime').text(loadTime + " miliseconds");
         
+        var cookies = listCookies();
+        $('#cookies').text(cookies);
       });
       
 //        $(window).load(function() {
