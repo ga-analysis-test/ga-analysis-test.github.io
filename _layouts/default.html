@@ -53,7 +53,11 @@
             console.log(event);
         conversionEve1(event);
       });
-      
+      gtag(function(tracker) {
+          var clientId = tracker.get('clientId');
+          console.log(clientId);
+      });
+
       function conversionEve1(event){
         console.log(event);
         gtag('send', 'event', {
