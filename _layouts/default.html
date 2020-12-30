@@ -53,10 +53,7 @@
             console.log(event);
         conversionEve1(event);
       });
-      gtag(function(tracker) {
-          var clientId = tracker.get('clientId');
-          console.log(clientId);
-      });
+
 
       function conversionEve1(event){
         console.log(event);
@@ -95,7 +92,11 @@
         var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
         console.log('Page load time is '+ loadTime);
         $('#pageLoadTime').text(loadTime + " miliseconds");
-
+        
+        gtag(function(tracker) {
+            var clientId = tracker.get('clientId');
+            console.log(clientId);
+        });
       });
       
 //        $(window).load(function() {
