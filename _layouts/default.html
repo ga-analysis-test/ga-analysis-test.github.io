@@ -57,10 +57,15 @@
 
       function conversionEve1(event){
         console.log(event);
-        gtag('send', 'event', {
-          eventCategory: 'Outbound Link',
-          eventAction: 'click',
-          eventLabel: 'www.tiktok.com'
+//         gtag('send', 'event', {
+//           eventCategory: 'Outbound Link',
+//           eventAction: 'click',
+//           eventLabel: 'www.google.com'
+//         });
+        gtag('event', 'begin_checkout', {
+          'event_category': 'ecommerce',
+          'event_label': 'purchase',
+          'value': 'google web'
         });
 
         console.log("Button clicked");
@@ -93,10 +98,6 @@
         console.log('Page load time is '+ loadTime);
         $('#pageLoadTime').text(loadTime + " miliseconds");
         
-        gtag(function(tracker) {
-            var clientId = tracker.get('clientId');
-            console.log(clientId);
-        });
       });
       
 //        $(window).load(function() {
