@@ -41,6 +41,13 @@
       <h4>Cookies</h4><span id="cookies"></span> 
     </div>
 
+    <h1>Pixel Testing</h1>
+    <p1>Click here to test Add to Cart</p1>
+    <br>
+    <button id='atc' type="button" class="btn btn-primary">
+      Add To Cart
+    </button>
+
     <div class="other">
       You can find the source code here:
       https://github.com/ga-analysis-test/ga-analysis-test.github.io/tree/gh-pages
@@ -116,15 +123,6 @@
 //         console.log("page complete LoadTime: ", Date.now()-timerStart);
 //         $('#pageLoadTime').text(Date.now()-timerStart + " miliseconds");
 //       });
-    </script>
-
-    <h1>Pixel Testing</h1>
-    <p1>Click here to test Add to Cart</p1>
-    <button id='atc' type="button" class="btn btn-primary">
-      Add To Cart
-    </button>
-
-    <script>
 
       document.getElementById('atc').addEventListener('click', function(event) {
         conversionATC(event);
