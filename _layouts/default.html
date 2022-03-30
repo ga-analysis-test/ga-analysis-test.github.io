@@ -58,7 +58,10 @@
       document.getElementById('conversion').addEventListener('click', function(event) {
         conversionEve1(event);
       });
-
+      
+      document.getElementById('atc').addEventListener('click', function(event) {
+        conversionATC(event);
+      });
 
       function conversionEve1(event){
         console.log(event);
@@ -68,6 +71,12 @@
           'event_label': 'purchase',
           'value': 'google web'
         });
+
+        console.log("Button clicked");
+      }
+
+      function conversionATC(event){
+        console.log(event);
         
         gtag('event', 'add_to_cart', {
           'event_category': 'ecommerce',
