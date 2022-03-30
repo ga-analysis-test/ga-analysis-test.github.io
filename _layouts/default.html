@@ -58,10 +58,6 @@
       document.getElementById('conversion').addEventListener('click', function(event) {
         conversionEve1(event);
       });
-      
-      document.getElementById('atc').addEventListener('click', function(event) {
-        conversionATC(event);
-      });
 
       function conversionEve1(event){
         console.log(event);
@@ -69,18 +65,6 @@
         gtag('event', 'begin_checkout', {
           'event_category': 'ecommerce',
           'event_label': 'purchase',
-          'value': 'google web'
-        });
-
-        console.log("Button clicked");
-      }
-
-      function conversionATC(event){
-        console.log(event);
-        
-        gtag('event', 'add_to_cart', {
-          'event_category': 'ecommerce',
-          'event_label': 'add_to_cart',
           'value': 'google web'
         });
 
@@ -136,8 +120,27 @@
 
     <h1>Pixel Testing</h1>
     <p1>Click here to test Add to Cart</p1>
-    <button id='conversion' type="button" class="btn btn-primary">
+    <button id='atc' type="button" class="btn btn-primary">
       Add To Cart
     </button>
+
+    <script>
+
+      document.getElementById('atc').addEventListener('click', function(event) {
+        conversionATC(event);
+      });
+
+      function conversionATC(event){
+        console.log(event);
+        
+        gtag('event', 'add_to_cart', {
+          'event_category': 'ecommerce',
+          'event_label': 'add_to_cart',
+          'value': 'google web'
+        });
+
+        console.log("Button clicked");
+      }
+    </script>
 </body>
 </html>
