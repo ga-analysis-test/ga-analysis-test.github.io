@@ -68,6 +68,12 @@
           'event_label': 'purchase',
           'value': 'google web'
         });
+        
+        gtag('event', 'add_to_cart', {
+          'event_category': 'ecommerce',
+          'event_label': 'add_to_cart',
+          'value': 'google web'
+        });
 
         console.log("Button clicked");
       }
