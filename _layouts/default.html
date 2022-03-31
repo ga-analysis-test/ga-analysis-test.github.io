@@ -1,11 +1,11 @@
 <html lang="en">
   <head>
     {% include analytics.html %}
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var timerStart = Date.now();
       ttq.instance('C0NOV1D2BAPH375FOQQG').track('Browse')
       ttq.track('Browse');
-    </script>
+    </script> -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCTTVC2"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-   <div class="container-sm">
+   <!-- <div class="container-sm">
     <h1 class="title">Google Analytics Test Landing Page</h1>
     <div class="info-item">
       <h4>User agent</h4><span id="userAgent"></span>
@@ -43,7 +43,7 @@
 
      <div class="info-item">
       <h4>Cookies</h4><span id="cookies"></span> 
-    </div>
+    </div> -->
 
     <h1 style="text-align:center">Pixel Testing</h1>
     <br>
@@ -72,6 +72,34 @@
       </div>
     </div>
     <br>
+    <br>
+
+    <h1 style="text-align:center">Incorrect Pixel Setup</h1>
+    <br>
+    
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>Click here to test Test1</h3>
+        <button id='atc' type="button" class="btn btn-primary" onclick="dataLayer.push({'event': 'Test1'});">
+          Test1
+        </button>
+        <br>
+      </div>
+      <div class="grid-item">
+        <h3>Click here to test Test2</h3>
+        <button id='initiateCheckout' type="button" class="btn btn-warning" onclick="dataLayer.push({'event': 'Test2'});">
+          Test2
+        </button>
+        <br>
+      </div>
+      <div class="grid-item">
+        <h3>Click here to test Test3</h3>
+        <button id='completeOrder' type="button" class="btn btn-success" onclick="dataLayer.push({'event': 'Test3'});">
+          Test3
+        </button>
+        <br>
+      </div>
+    </div>
 
     <div class="other">
       You can find the source code here:
@@ -85,7 +113,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script>
+    <!-- <script>
       
       document.getElementById('conversion').addEventListener('click', function(event) {
         conversionEve1(event);
@@ -164,6 +192,6 @@
 
         console.log("Button clicked");
       }
-    </script>
+    </script> -->
 </body>
 </html>
